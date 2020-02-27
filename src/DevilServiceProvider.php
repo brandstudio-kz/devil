@@ -14,14 +14,16 @@ class DevilServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/config/devil.php', 'devil'
         );
-    }
-    
-    public function boot()
-    {
+
         $this->app->bind(
             ExceptionHandler::class,
             Handler::class
         );
+    }
+
+    public function boot()
+    {
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'brandstudio');
 
         if($this->app->runningInConsole()) {
             $this->publishes([

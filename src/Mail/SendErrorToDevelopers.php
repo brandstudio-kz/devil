@@ -32,6 +32,6 @@ class SendErrorToDevelopers extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.error', ['trace' => $this->trace, 'message' => $this->message]);
+        return $this->markdown('brandstudio::emails.error', ['trace' => $this->trace, 'message' => $this->message]);
     }
 }

@@ -4,7 +4,7 @@ namespace BrandStudio\Devil\Exceptions;
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\SendErrorToDevelopers;
+use BrandStudio\Devil\Mail\SendErrorToDevelopers;
 
 class Handler extends ExceptionHandler
 {
